@@ -1,0 +1,102 @@
+/* Import Inter font — must come before @import 'tailwindcss' */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Branding tokens are supplied by the shared public/ups-theme.css stylesheet. */
+    --color-navy-primary: var(--ups-sidebar, #32131F);
+    --color-navy-secondary: var(--ups-brand-hover, #581426);
+    --color-blue-primary: #2563EB;
+    --color-blue-light: #DBEAFE;
+    --color-app-bg: var(--ups-workspace, #F7F7F8);
+    --color-surface: #FFFFFF;
+    --color-text-primary: #0F172A;
+    --color-text-secondary: #64748B;
+    --color-border: #E2E8F0;
+    --color-success: #16A34A;
+    --color-warning: #D97706;
+    --color-danger: #DC2626;
+}
+
+/* Base styles */
+body {
+    font-family: var(--font-sans);
+    background-color: var(--ups-workspace, #F7F7F8);
+    color: #0F172A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Sidebar scrollbar */
+.sidebar-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+    outline: 2px solid var(--ups-brand, #701B30);
+    outline-offset: 2px;
+}
+
+/* Table horizontal scroll on small screens */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Transition for sidebar */
+.sidebar-transition {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Nav active state */
+.nav-active {
+    background-color: #57283B;
+    border-left: 3px solid var(--ups-gold, #C4A35A);
+    color: #F4E5C3;
+}
+
+.nav-item {
+    border-left: 3px solid transparent;
+}
+
+/* Card hover shadow */
+.card-hover:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.15s ease;
+}
+
+/* Status badge colors */
+.badge-active    { background: #dcfce7; color: #15803d; }
+.badge-inactive  { background: #f1f5f9; color: #475569; }
+.badge-pending   { background: #fef9c3; color: #a16207; }
+.badge-released  { background: #dbeafe; color: #1d4ed8; }
+.badge-danger    { background: #fee2e2; color: #b91c1c; }
+.badge-success   { background: #dcfce7; color: #15803d; }
+.badge-warning   { background: #fef3c7; color: #d97706; }
+
+/* Connection status */
+.conn-online    { background: #dcfce7; color: #15803d; }
+.conn-offline   { background: #fee2e2; color: #b91c1c; }
+.conn-pending   { background: #fef9c3; color: #a16207; }
+.conn-error     { background: #fee2e2; color: #991b1b; }
+
+/* Print styles */
+@media print {
+    .no-print { display: none !important; }
+    .print-full { width: 100% !important; }
+}

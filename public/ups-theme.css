@@ -1,0 +1,58 @@
+/* Shared UPS-inspired interface palette. Informational blue and status colors retain their meaning. */
+:root {
+    --ups-brand: #701B30;
+    --ups-brand-hover: #581426;
+    --ups-brand-active: #45101D;
+    --ups-brand-muted: #A27885;
+    --ups-brand-soft: #F8EEF1;
+    --ups-sidebar: #32131F;
+    --ups-gold: #C4A35A;
+    --ups-gold-light: #E3CF9C;
+    --ups-workspace: #F7F7F8;
+}
+
+.bg-brand { background-color: var(--ups-brand); }
+.bg-brand-dark { background-color: var(--ups-sidebar); }
+.bg-brand-muted { background-color: var(--ups-brand-muted); }
+.bg-brand-soft { background-color: var(--ups-brand-soft); }
+.bg-brand-gold { background-color: var(--ups-gold); }
+.bg-app-bg { background-color: var(--ups-workspace); }
+.text-brand { color: var(--ups-brand); }
+.text-brand-gold { color: var(--ups-gold-light); }
+.border-brand { border-color: var(--ups-brand); }
+.border-brand-soft { border-color: #EAD4DB; }
+.ring-brand { --tw-ring-color: var(--ups-brand); }
+.ring-brand-soft { --tw-ring-color: #EAD4DB; }
+
+.hover\:bg-brand-hover:hover { background-color: var(--ups-brand-hover); }
+.hover\:bg-brand-soft:hover { background-color: var(--ups-brand-soft); }
+.hover\:border-brand:hover { border-color: var(--ups-brand); }
+.hover\:text-brand:hover { color: var(--ups-brand); }
+.active\:bg-brand-active:active { background-color: var(--ups-brand-active); }
+.focus\:ring-brand:focus { --tw-ring-color: var(--ups-brand); }
+.focus\:border-brand:focus { border-color: var(--ups-brand); }
+.focus-visible\:outline-brand:focus-visible { outline-color: var(--ups-brand); }
+.group:hover .group-hover\:bg-brand { background-color: var(--ups-brand); }
+
+*:focus-visible {
+    outline-color: var(--ups-brand);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--ups-brand);
+}
+
+.nav-item.nav-active {
+    background-color: #57283B;
+    border-left-color: var(--ups-gold);
+    color: #F4E5C3;
+}
+
+#sidebar :focus-visible {
+    outline-color: var(--ups-gold-light);
+}
+
+.ups-app-header {
+    border-top: 3px solid var(--ups-gold);
+}
